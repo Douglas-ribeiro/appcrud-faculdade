@@ -20,4 +20,7 @@ export class ClienteService {
   getAll(){
     return this.htpp.get<[Cliente]>(this.url);
   }
+  remove(id: any){
+    return this.htpp.delete(this.url+'?id=' + id);
+  }
 }
