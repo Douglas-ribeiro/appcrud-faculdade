@@ -16,4 +16,8 @@ export class ClienteService {
   private url = 'http://localhost/apiAppCrud/apiCliente';
 
   constructor(private htpp: HttpClient) { }
+
+  getAll(){
+    return this.htpp.get<[Cliente]>(this.url);
+  }
 }
