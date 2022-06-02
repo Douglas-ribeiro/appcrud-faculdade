@@ -13,7 +13,7 @@ export interface Cliente{
 })
 export class ClienteService {
 
-  private url = 'http://localhost/apiAppCrud/apiCliente';
+  private url = 'http://localhost/apiAppCrud/apiCliente.php';
 
   constructor(private htpp: HttpClient) { }
 
