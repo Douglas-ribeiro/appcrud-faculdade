@@ -17,4 +17,12 @@ export class ClientePage implements OnInit {
     })
   }
 
+  remover(id: any){
+    this.service.remove(id).subscribe( () =>{
+      this.service.getAll().subscribe(resposta => {
+        this.clientes = resposta;
+      });
+    });
+  }
+
 }
