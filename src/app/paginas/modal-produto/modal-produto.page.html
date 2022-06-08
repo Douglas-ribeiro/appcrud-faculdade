@@ -8,8 +8,13 @@
 <ion-content>
   <form #f="ngForm" (ngSubmit)="enviarFormulario(f)">
     <ion-item>
-      <ion-label></ion-label>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input ngModel name = "descrição"></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label position="floating">Valor</ion-label>
+      <ion-input ngModel name = "valor"></ion-input>
+    </ion-item>
+    <ion-button fill="outline" expand="block"b type="submit">Cadastrar</ion-button>
   </form>
-
 </ion-content>
