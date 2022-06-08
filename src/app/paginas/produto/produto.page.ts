@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Produto, ProdutoService } from 'src/app/servicos/produto.service';
+import { ModalProdutoPage } from '../modal-produto/modal-produto.page';
 
 
 @Component({

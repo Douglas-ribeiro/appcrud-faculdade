@@ -23,10 +23,7 @@ const routes: Routes = [
     path: 'produto',
     loadChildren: () => import('./paginas/produto/produto.module').then( m => m.ProdutoPageModule)
   },
-  {
-    path: 'produto',
-    loadChildren: () => import('./servicos/produto/produto.module').then( m => m.ProdutoPageModule)
-  },
+  
   {
     path: 'modal-produto',
     loadChildren: () => import('./paginas/modal-produto/modal-produto.module').then( m => m.ModalProdutoPageModule)
