@@ -23,4 +23,7 @@ export class ClienteService {
   remove(id: any){
     return this.htpp.delete(this.url+'?id=' + id);
   }
+  create(cliente: Cliente){
+    return this.htpp.post(this.url, cliente);
+  }
 }
