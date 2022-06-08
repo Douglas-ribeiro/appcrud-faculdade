@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export interface Produto{
   id: number;
   descricao: string;
-  valor: number
+  valor: number;
 }
 
 @Injectable({
