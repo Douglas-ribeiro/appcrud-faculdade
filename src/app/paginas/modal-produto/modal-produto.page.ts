@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
-import { ClienteService } from 'src/app/servicos/cliente.service';
+import { ProdutoService } from 'src/app/servicos/produto.service';
 import { Produto } from 'src/app/servicos/produto.service';
 
 @Component({
@@ -13,13 +13,12 @@ export class ModalProdutoPage implements OnInit {
 
   @Input() p: Produto;
   atualizar = false;
-
   dadosProduto= {
     descricao: '',
     valor: 0
   }
 
-  constructor( private modalCtrl: ModalController, private service: ClienteService) { }
+  constructor( private modalCtrl: ModalController, private service: ProdutoService) { }
 
   ngOnInit() {
     if(this.p){
