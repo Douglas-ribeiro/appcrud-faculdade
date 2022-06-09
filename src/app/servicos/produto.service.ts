@@ -28,6 +28,9 @@ export class ProdutoService {
     return this.http.post(this.url, produto);
   }
 
+  update(produto: Produto, id: any){
+    return this.http.put(this.url+'?id=' + id, produto);
+  }
 
 
 }
