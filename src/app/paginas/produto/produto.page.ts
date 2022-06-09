@@ -41,4 +41,18 @@ export class ProdutoPage implements OnInit {
     });
   }
 
+  atualizar( p: Produto){
+    this.modalCtrl.create({
+      component: ModalProdutoPage,
+      componentProps: {p}
+    }).then(modal => {
+      modal.present();
+      return modal.onDidDismiss();
+    }).then(({data}) => {
+      this.service.getAll().subscribe(resposta => {
+        this.produtos = resposta;
+      });
+    });
+  }
+
 }
